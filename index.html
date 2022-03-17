@@ -1,0 +1,83 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <title>Flip test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="date" class="date">...</div>
+    <div id="main" class="main">
+      <!--hours-->
+
+      <div id="flip-card-h" class="flip-card">
+        <div id="flip-card-inner-h" class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="up">
+              <div id="hours_prev" class="digit">--</div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="hours_post" class="digit">--</div>
+          </div>
+        </div>
+        <div id="mer" class="mer"></div>
+        <div class="middle"></div>
+      </div>
+
+      <!--minutes-->
+
+      <div id="flip-card-m" class="flip-card">
+        <div id="flip-card-inner-m" class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="up">
+              <div id="minutes_prev" class="digit">--</div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="minutes_post" class="digit">--</div>
+          </div>
+        </div>
+        <div class="middle"></div>
+      </div>
+
+      <!--secods-->
+
+      <div id="flip-card-s" class="flip-card">
+        <div id="flip-card-inner-s" class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="up">
+              <div id="seconds_prev" class="digit">--</div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div id="seconds_post" class="digit">--</div>
+          </div>
+        </div>
+        <div class="middle"></div>
+      </div>
+    </div>
+
+    <!--options-->
+
+    <br />
+    <div id="options" class="options">
+      <div class="fullscreen">
+        <a href="javascript:openFullscreen()"
+          ><img alt="Enter fullscreen" width="25px" src="fullscreen-12-xxl.png"
+        /></a>
+      </div>
+      <input
+        class="hourtype"
+        type="checkbox"
+        id="hourtype"
+        name="hourtype"
+        value="24 hour format"
+      />
+      <label for="hourtype"> 24 hour format</label>
+      <br />
+      <input id="fc-color" type="color" onchange="javascript:setFontColor()" />
+      <input id="bg-color" type="color" onchange="javascript:setBackground()" />
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

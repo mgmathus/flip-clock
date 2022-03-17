@@ -1,0 +1,114 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 250px;
+  perspective: 999px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgba(235, 235, 226);
+  color: black;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(19, 19, 19);
+  border-radius: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transform-origin: middle;
+  -moz-transform-origin: middle;
+  transform-origin: middle;
+
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  transform: rotateX(0);
+
+  -webkit-transition: transform 0.7s ease-in-out;
+  -moz-transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  background-color: rgb(235, 235, 226);
+  border-radius: 10px;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  color: black;
+  transform: rotateX(180deg);
+}
+
+.digit {
+  height: 100%;
+  font-size: 10rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.middle {
+  margin-top: 125px;
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 125px;
+  border: 2px solid rgb(19, 19, 19);
+  border-radius: 0 0 10px 10px;
+}
+
+.options {
+  text-align: center;
+}
+
+.date {
+  font-size: 2vw;
+  text-align: center;
+  color: rgb(112, 112, 112);
+  margin-top: 10%;
+}
+
+.mer {
+  margin-top: -90%;
+  margin-left: -65%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  color: black;
+}
+
+@media all and (display-mode: fullscreen) {
+  .options {
+    display: none;
+  }
+}
